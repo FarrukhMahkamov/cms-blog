@@ -8,21 +8,22 @@
      $user_email = $_POST['user_email'];
      $user_password = $_POST['user_password'];
      $user_role = $_POST['user_role'];
+    
      
 
-    //  $post_image = $_FILES['image']['name'];
-    //  $post_image_temp = $_FILES['image']['tmp_name'];
-    //  move_uploaded_file($post_image_temp, "../img/blog/$post_image" );
+     $post_image = $_FILES['image']['name'];
+     $post_image_temp = $_FILES['image']['tmp_name'];
+     move_uploaded_file($post_image_temp, "../img/blog/$post_image" );
 
-    //  $query = "INSERT INTO posts(post_category_id, post_image, post_date, post_title, post_content, post_author, post_tags, post_status) ";
+     $query = "INSERT INTO posts(post_category_id, post_image, post_date, post_title, post_content, post_author, post_tags, post_status) ";
 
-    //  $query .= "VALUES ({$post_category_id},'{$post_image}',now(),'{$post_title}','{$post_content}','{$post_author}','{$post_comment_count}','{$post_tags}','{$post_status}' ) ";
+     $query .= "VALUES ({$post_category_id},'{$post_image}',now(),'{$post_title}','{$post_content}','{$post_author}','{$post_comment_count}','{$post_tags}','{$post_status}' ) ";
 
-    //  $create_post_query = mysqli_query($connection, $query);
-    //  if (!$create_post_query) {
+     $create_post_query = mysqli_query($connection, $query);
+     if (!$create_post_query) {
 
-    //   die('QUERY FAILED' . mysqli_error($connection));
-    // }
+      die('QUERY FAILED' . mysqli_error($connection));
+    }
  
     }
 ?>
