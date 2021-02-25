@@ -102,6 +102,14 @@
           }
             ?>
             <?php 
+            // Deleting users
+            if (isset($_GET['delete'])) {
+            $the_comment_id = $_GET['delete'];
+            $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
+            $delete_comments = mysqli_query($connection, $query);
+            header("Location: comments.php");
+          }
+     
 
               // Approve 
                if (isset($_GET['approve'])) {
@@ -121,12 +129,7 @@
               }
               //End of unnapprove 
 
-              if (isset($_GET['delete'])) {
-                $the_comment_id = $_GET['delete'];
-                $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
-                $delete_comments = mysqli_query($connection, $query);
-                header("Location: comments.php");
-              }
+            
             ?>
             <!-- End of displaying posts -->
 

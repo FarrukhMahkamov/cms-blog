@@ -49,7 +49,7 @@
 
        <div class="form-group">
          <label for="exampleInput1" class="bmd-label-floating">User Password</label>
-         <input type="text" class="form-control" id="exampleInput1" name="user_password">
+         <input type="password" class="form-control" id="exampleInput1" name="user_password">
          <span class="bmd-help">Password</span>
        </div>
 
