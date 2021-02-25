@@ -4,11 +4,9 @@
      $post_category_id = $_POST['post_category']; 
      $post_image = $_FILES['image']['name'];
      $post_image_temp = $_FILES['image']['tmp_name'];
-     $post_date = date('d-m-y');
      $post_title = $_POST['post_title'];
      $post_content = $_POST['post_content'];
      $post_author = $_POST['post_author'];
-    //  $post_comment_count = 4;
      $post_tags = $_POST['post_tag'];
      $post_status = $_POST['post_status'];
     

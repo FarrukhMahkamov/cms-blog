@@ -48,18 +48,18 @@
               $select_users = mysqli_query($connection,$query);
               while($row = mysqli_fetch_assoc($select_users)) {
               $user_id = $row['user_id'];
-              $username = $row['username'];
+              $user_name = $row['user_name'];
               // $user_password = $row['user_password'];
               $user_firstname = $row['user_firstname'];
               $user_lastname = $row['user_lastname']; 
               $user_email = $row['user_email'];
               $user_image = $row['user_image'];
-              $user_role = $row['role'];
+              $user_role = $row['user_role'];
              
               
               echo "<tr>";
               echo "<td>$user_id</td>";
-              echo "<td>$username</td>";
+              echo "<td>$user_name</td>";
               // echo "<td>$user_password</td>";
               echo "<td>$user_firstname</td>";
               echo "<td>$user_lastname</td>";
@@ -106,31 +106,33 @@
             ?>
             <?php 
 
-              // Approve 
-              //  if (isset($_GET['approve'])) {
-              //   $the_comment_id = $_GET['approve'];
-              //   $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = $the_comment_id ";
-              //   $aprove_comment_query = mysqli_query($connection, $query);
-              //   header("Location: comments.php");
-              // }
+              // Admin 
+       if (isset($_GET['approve'])) {
+        $the_comment_id = $_GET['approve'];
+        $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = $the_comment_id ";
+        $aprove_comment_query = mysqli_query($connection, $query);
+        header("Location: comments.php");
+      }
               //End of approve 
 
               // Unnapprove 
-              // if (isset($_GET['unapprove'])) {
-              //   $the_comment_id = $_GET['unapprove'];
-              //   $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = $the_comment_id ";
-              //   $unnaprove_comment_query = mysqli_query($connection, $query);
-              //   header("Location: comments.php");
-              // }
-              //End of unnapprove 
+         if (isset($_GET['unapprove'])) {
+         $the_comment_id = $_GET['unapprove'];
+         $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = $the_comment_id ";
+         $unnaprove_comment_query = mysqli_query($connection, $query);
+         header("Location: comments.php");
+        }
+     
+    
+         if (isset($_GET['delete'])) {
+         $the_comment_id = $_GET['delete'];
+         $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
+         $delete_comments = mysqli_query($connection, $query);
+         header("Location: comments.php");
+       }
+      ?>
+      //End of unnapprove 
 
-              // if (isset($_GET['delete'])) {
-              //   $the_comment_id = $_GET['delete'];
-              //   $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
-              //   $delete_comments = mysqli_query($connection, $query);
-              //   header("Location: comments.php");
-              // }
-            ?>
             <!-- End of displaying posts -->
 
             </tbody>
