@@ -47,7 +47,7 @@
                      <li><a href="#"><i class="fa fa-tags"></i><?php echo $post_tags; ?></a></li>
                 </ul>
              </div>
-   
+   <div class="test"></div>
            </article>
     <?php }?>
                       
