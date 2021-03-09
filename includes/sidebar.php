@@ -19,6 +19,23 @@
     </form>
 </aside>
 
+
+<!-- LOGIN -->
+<aside>
+<h3 style="margin-left: 130px;">Login</h3>
+
+    <form action="includes/login.php" method="post" style="justify-content: center;">
+    <div class="form-group">
+       <input type="text" class="form-control" name="user_name" placeholder="User Name"><br>
+       <input type="password" class="form-control" name="user_password" id="" placeholder="User Password"><br>
+       <button class=" primary-bg text-white w-50 btn_1 boxed-btn "
+            type="submit" name='login' style="margin-left: 80px;">Login</button>
+      </div>
+   </form>
+   </aside>
+
+
+
 <aside class="single_sidebar_widget post_category_widget">
      <!-- selecting categories  -->
         <?php 
