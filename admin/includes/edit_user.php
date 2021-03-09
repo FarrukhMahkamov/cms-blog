@@ -29,7 +29,7 @@ if(isset($_GET['edit_user'])){
    UPDATE users 
    SET user_firstname = '$user_firstname'
      , user_lastname = '$user_lastname'
-     , post_date = now()
+     , date = now()
      , user_name = '$user_name'
      , user_email = '$user_email'
      , user_password = '$user_password'
@@ -39,6 +39,9 @@ if(isset($_GET['edit_user'])){
  
  
   $update_user = mysqli_query($connection, $query);
+  if (!$update_user) {
+    echo "Itsnot woking " . mysqli_error($connection);
+  }
  
  }
 ?>
