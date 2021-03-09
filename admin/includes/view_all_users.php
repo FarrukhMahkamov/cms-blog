@@ -68,7 +68,7 @@
               echo "<td> <button  class='btn btn-success  btn-sm'><a style='color: white;' href='users.php?change_to_admin=$user_id'>Admin</a></button></td>";
               echo "<td> <button  class='btn btn-warning  btn-sm'><a style='color: white;' href='users.php?change_to_sub=$user_id'>Subscriber</a></button></td>";
               echo "<td> <button  class='btn btn-danger  btn-sm'><a style='color: white;' href='users.php?delete=$user_id'>Delete</a></button></td>";
-              echo "<td> <a href='user.php?source=edit_user&edit_user={$user_id}'><i class='fas fa-user-edit'></i></a></td>";
+              echo "<td> <a href='users.php?source=edit_user&edit_user={$user_id}'><i class='fas fa-user-edit'></i></a></td>";
               echo "</tr>";
 
           }

@@ -1,7 +1,5 @@
-
-
 <?php 
-  include "includes/db.php";
+  include "includes/db.php";2
   include "includes/header.php";
   include "includes/navigation.php";
 ?>
