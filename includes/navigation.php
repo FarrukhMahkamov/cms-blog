@@ -25,6 +25,7 @@
                         }
                     ?>
                       <li class="active" style="color: White;"><a href="../admin/index.php">admin</a></li>
+                      <li class="active" style="color: White;"><a href="../includes/login.php">Login</a></li>
                         </ul>   
                 </nav>
             </div>
