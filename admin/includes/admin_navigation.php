@@ -43,7 +43,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./includes/profile.php">
+            <a class="nav-link" href="./profile.php">
               <i class="material-icons">person</i>
               <p>profile</p>
             </a>
