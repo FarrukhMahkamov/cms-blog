@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php include "db.php" ?>
 
 <?php 
@@ -18,8 +19,19 @@
 
 		while ($row = mysqli_fetch_array($select_users_query)) {
 			
-			echo $db_id = $row['user_id'];
+			 $db_user_id = $row['user_id'];
+			 $db_user_name = $row['user_name'];
+			 $db_user_password = $row['user_password'];
+			 $db_user_first_name = $row['user_firstname'];
+			 $db_user_lastname = $row['user_lastname'];
+			 $db_user_role = $row['user_role'];
+		}
+		if ($user_name !== $db_user_name && $user_password !== $db_user_password)  {
+			header("Location : ../index.php ")
+		}elseif ($user_name == $db_user_name && $user_password == $db_user_password) {
+			
 		}
 
    }
+
 ?>

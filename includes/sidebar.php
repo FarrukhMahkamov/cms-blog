@@ -24,7 +24,7 @@
 <aside>
 <h3 style="margin-left: 130px;">Login</h3>
 
-    <form action="includes/login.php" method="post" style="justify-content: center;">
+    <form action="includes/login.php" method="POST>
     <div class="form-group">
        <input type="text" class="form-control" name="user_name" placeholder="User Name"><br>
        <input type="password" class="form-control" name="user_password" id="" placeholder="User Password"><br>
