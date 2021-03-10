@@ -42,6 +42,12 @@
               <p>Comments</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./includes/profile.php">
+              <i class="material-icons">person</i>
+              <p>profile</p>
+            </a>
+          </li>
 
           <li class="nav-item dropdown">
                 <a class="nav-link" href="users.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
